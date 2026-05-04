@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resistencia a la insulina: la causa silenciosa detrás de tu peso | Dr. Cristian Ortiz</title>
+  <meta name="description" content="La mayoría de los pacientes con obesidad tienen resistencia a la insulina y no lo saben. Qué es, cómo se detecta y por qué bloquea todos tus intentos de bajar de peso." />
+  <meta name="keywords" content="resistencia a la insulina, obesidad, metabolismo, bajar de peso, bariatría, Dr. Cristian Ortiz, Saltillo" />
+  <meta name="author" content="Dr. Cristian Ortiz" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1B2D6B;
+      --teal: #2A9D8F;
+      --teal-light: #E8F5F4;
+      --gold: #E9C46A;
+      --coral: #E76F51;
+      --dark: #111827;
+      --gray: #6B7280;
+      --light: #F9FAFB;
+      --white: #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.8;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      padding: 80px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(42,157,143,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin-bottom: 32px;
+      font-weight: 300;
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-meta span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+    }
+    .hero-meta .dot { color: var(--teal); }
+
+    /* ── LAYOUT ── */
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    .article-wrap h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 56px 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid var(--teal);
+    }
+    .article-wrap h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin: 32px 0 10px;
+    }
+    .article-wrap p {
+      font-size: 1rem;
+      color: #374151;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    .article-wrap strong { font-weight: 500; color: var(--dark); }
+
+    /* ── LEAD ── */
+    .lead {
+      font-size: 1.2rem !important;
+      color: var(--dark) !important;
+      font-weight: 400 !important;
+      border-left: 4px solid var(--teal);
+      padding-left: 20px;
+      margin-bottom: 40px !important;
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight {
+      background: var(--teal-light);
+      border-left: 5px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 24px 28px;
+      margin: 32px 0;
+    }
+    .highlight p { margin-bottom: 0; color: #1f4f4a; }
+    .highlight strong { color: var(--teal); }
+
+    .highlight-gold {
+      background: #FFFBEB;
+      border-left: 5px solid var(--gold);
+    }
+    .highlight-gold p { color: #78350f; }
+    .highlight-gold strong { color: #92400e; }
+
+    .highlight-coral {
+      background: #FFF5F3;
+      border-left: 5px solid var(--coral);
+    }
+    .highlight-coral p { color: #7f1d1d; }
+    .highlight-coral strong { color: #991b1b; }
+
+    /* ── STAT CARDS ── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 36px 0;
+    }
+    .stat-card {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .stat-card .number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-card .label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    /* ── SYMPTOM LIST ── */
+    .symptom-list {
+      list-style: none;
+      margin: 20px 0 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+    .symptom-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--light);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: #374151;
+    }
+    .symptom-list li::before {
+      content: '▸';
+      color: var(--teal);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── NUMBERED STEPS ── */
+    .steps { margin: 24px 0; }
+    .step {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-body h3 { margin-top: 6px; }
+    .step-body p { margin-bottom: 0; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid #E5E7EB;
+      margin: 48px 0;
+    }
+
+    /* ── AUTHOR CARD ── */
+    .author-card {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 36px;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      margin-top: 64px;
+      flex-wrap: wrap;
+    }
+    .author-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(42,157,143,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 2rem;
+    }
+    .author-info h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .author-info p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 12px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      padding: 10px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #238276; }
+
+    /* ── BACK LINK ── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hero { padding: 60px 20px 48px; }
+      .author-card { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="hero-badge">Metabolismo · Abril 2025</span>
+      <h1>Resistencia a la insulina:<br><em>la causa silenciosa</em><br>detrás de tu peso</h1>
+      <p class="hero-sub">La mayoría de mis pacientes con obesidad la tienen y no lo saben. Qué es, cómo se detecta y por qué bloquea todos tus intentos de bajar de peso.</p>
+      <div class="hero-meta">
+        <span>Dr. Cristian Ortiz</span>
+        <span class="dot">●</span>
+        <span>Bariatría, Obesidad y Nutrición</span>
+        <span class="dot">●</span>
+        <span>8 min de lectura</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTICLE -->
+  <main class="article-wrap">
+
+    <a href="index.html" class="back-link">← Volver al blog</a>
+
+    <p class="lead">
+      Cada semana llegan a mi consultorio pacientes que han probado de todo: dietas, ejercicio, pastillas, ayunos. Hacen todo "bien" y el peso no cede. Cuando revisamos sus estudios, en la mayoría de los casos encontramos lo mismo: <strong>resistencia a la insulina</strong>. Una condición que bloquea silenciosamente cualquier intento de bajar de peso.
+    </p>
+
+    <h2>¿Qué es exactamente la resistencia a la insulina?</h2>
+    <p>
+      La insulina es una hormona producida por el páncreas cuya función principal es "abrir la puerta" de las células para que la glucosa (azúcar) del torrente sanguíneo pueda entrar y usarse como energía. Cuando todo funciona bien, este proceso es eficiente y automático.
+    </p>
+    <p>
+      La resistencia a la insulina ocurre cuando las células del cuerpo —especialmente las del músculo, el hígado y el tejido graso— dejan de responder adecuadamente a esta hormona. Es como si la llave siguiera siendo la misma, pero la cerradura ya no funcionara igual.
+    </p>
+
+    <div class="highlight">
+      <p><strong>En términos simples:</strong> el páncreas produce insulina, pero el cuerpo no la "escucha". Como respuesta, el páncreas produce <em>más</em> insulina para compensar. Este exceso de insulina en sangre es precisamente lo que promueve el almacenamiento de grasa y bloquea su eliminación.</p>
+    </div>
+
+    <h2>¿Por qué es la causa silenciosa?</h2>
+    <p>
+      La resistencia a la insulina puede desarrollarse durante años sin síntomas claros ni diagnóstico. Los niveles de glucosa en ayuno pueden aparecer normales en un examen de rutina, porque el páncreas está trabajando el doble para mantenerla controlada. El problema es lo que sucede detrás de escena.
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="number">1 de 3</div>
+        <div class="label">adultos en México tiene resistencia a la insulina sin saberlo</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">+80%</div>
+        <div class="label">de mis pacientes con obesidad la presentan al llegar a consulta</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">10 años</div>
+        <div class="label">puede tardar en detectarse si no se busca activamente</div>
+      </div>
+    </div>
+
+    <h2>¿Cómo sé si la tengo? Señales de alerta</h2>
+    <p>
+      Aunque puede pasar desapercibida, hay señales que el cuerpo suele enviar. Si reconoces varios de estos síntomas en ti, es importante evaluarte:
+    </p>
+
+    <ul class="symptom-list">
+      <li>Dificultad para bajar de peso a pesar de hacer dieta</li>
+      <li>Hambre excesiva, especialmente de carbohidratos o dulces</li>
+      <li>Fatiga después de comer, especialmente en la tarde</li>
+      <li>Dificultad para concentrarse ("niebla mental")</li>
+      <li>Acantosis nigricans: piel oscura en cuello, axilas o ingles</li>
+      <li>Triglicéridos elevados en estudios de laboratorio</li>
+      <li>Presión arterial alta sin causa aparente</li>
+      <li>Grasa concentrada principalmente en el abdomen</li>
+      <li>Sueño no reparador, cansancio crónico</li>
+      <li>Síndrome de ovario poliquístico (en mujeres)</li>
+    </ul>
+
+    <div class="highlight highlight-gold">
+      <p><strong>Importante:</strong> Ninguno de estos síntomas por sí solo confirma el diagnóstico. Es la combinación de ellos, junto con estudios específicos, lo que permite identificarla con certeza.</p>
+    </div>
+
+    <h2>¿Cómo se diagnostica?</h2>
+    <p>
+      El error más común es buscar resistencia a la insulina solo con glucosa en ayuno. Ese estudio puede ser normal incluso cuando la condición ya está presente. Los estudios que realmente permiten detectarla son:
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Insulina en ayuno</h3>
+          <p>Mide directamente el nivel de insulina circulante. Valores elevados (>10-15 µU/mL en ayuno) sugieren que el páncreas está trabajando en exceso para compensar la resistencia.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Índice HOMA-IR</h3>
+          <p>Se calcula combinando glucosa e insulina en ayuno. Es el marcador más utilizado clínicamente. Un valor mayor a 2.5 indica resistencia a la insulina.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Curva de tolerancia a la glucosa con insulina</h3>
+          <p>Evalúa cómo responde el cuerpo ante una carga de azúcar. Es el estudio más completo y permite identificar resistencia incluso cuando los valores en ayuno son normales.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Perfil de lípidos + Hemoglobina glucosilada</h3>
+          <p>Los triglicéridos elevados y HDL bajo son marcadores indirectos muy confiables. La HbA1c muestra el promedio de glucosa de los últimos 3 meses.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>¿Por qué bloquea la pérdida de peso?</h2>
+    <p>
+      Esta es la pregunta que más escucho en el consultorio: <em>"Doctor, hago dieta y ejercicio y no bajo nada. ¿Qué está pasando?"</em>
+    </p>
+    <p>
+      La respuesta casi siempre involucra a la insulina. Cuando sus niveles están crónicamente elevados, ocurren tres cosas que hacen casi imposible perder grasa:
+    </p>
+
+    <div class="highlight highlight-coral">
+      <p><strong>1. Se activa la lipogénesis:</strong> La insulina alta le indica al cuerpo que almacene grasa, especialmente en el abdomen. El cuerpo entra en modo "guardar", no en modo "quemar".</p>
+    </div>
+    <div class="highlight highlight-coral" style="margin-top:-16px;">
+      <p><strong>2. Se inhibe la lipólisis:</strong> La quema de grasa almacenada queda bloqueada. Aunque estés en déficit calórico, el cuerpo no puede acceder fácilmente a sus reservas.</p>
+    </div>
+    <div class="highlight highlight-coral" style="margin-top:-16px;">
+      <p><strong>3. Se dispara el hambre:</strong> La glucosa entra a las células con dificultad, el cerebro interpreta esto como falta de energía y envía señales de hambre constante. Come, sube insulina, almacena más grasa. El ciclo se repite.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <h2>¿Tiene solución? Sí, y es más accesible de lo que crees</h2>
+    <p>
+      La resistencia a la insulina es una condición <strong>reversible</strong> en la mayoría de los casos. Con un enfoque médico adecuado que combine cambios en alimentación, actividad física y, cuando está indicado, tratamiento farmacológico, es posible recuperar la sensibilidad a la insulina y desbloquear la pérdida de peso.
+    </p>
+    <p>
+      Los pilares del tratamiento incluyen reducción de carbohidratos refinados, manejo del estrés crónico (que eleva el cortisol y empeora la resistencia), ejercicio de fuerza muscular, sueño reparador y, en muchos casos, medicamentos como metformina o los nuevos agonistas GLP-1 que han mostrado resultados extraordinarios en este perfil de paciente.
+    </p>
+
+    <div class="highlight">
+      <p><strong>Lo más importante:</strong> No se trata de "comer menos y moverse más". Se trata de entender qué está pasando en tu metabolismo y atacar la causa raíz. Sin ese diagnóstico, ninguna dieta funciona a largo plazo.</p>
+    </div>
+
+    <h2>¿Cuándo consultar?</h2>
+    <p>
+      Si llevas más de 6 meses intentando bajar de peso sin resultados sostenidos, si tienes antecedentes familiares de diabetes tipo 2, o si reconociste varios de los síntomas mencionados en este artículo, es momento de hacerte una evaluación metabólica completa.
+    </p>
+    <p>
+      No esperes a tener diabetes para actuar. La resistencia a la insulina es la etapa previa, y es ahí donde el tratamiento tiene mayor impacto.
+    </p>
+
+    <!-- AUTHOR -->
+    <div class="author-card">
+      <div class="author-logo">🩺</div>
+      <div class="author-info">
+        <h4>Dr. Cristian Ortiz</h4>
+        <p>Especialista en Bariatría, Obesidad y Nutrición. Tratamiento integral del sobrepeso con enfoque metabólico y hormonal.</p>
+        <a href="index.html#contacto" class="cta-btn">Agendar consulta</a>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
